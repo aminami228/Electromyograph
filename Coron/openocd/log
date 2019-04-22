@@ -1,0 +1,9 @@
+Open On-Chip Debugger (2008-03-22 12:00 CET) svn: r520
+URL: http://svn.berlios.de/svnroot/repos/openocd/trunk/
+Info:    jtag.c:1329 jtag_examine_chain(): JTAG device found: 0x3ba00477 (Manufacturer: 0x23b, Part: 0xba00, Version: 0x3)
+Info:    jtag.c:1329 jtag_examine_chain(): JTAG device found: 0x16410041 (Manufacturer: 0x020, Part: 0x6410, Version: 0x1)
+Info:    target.c:240 target_init_handler(): executing reset script 'flash.script'
+Info:    stm32x.c:658 stm32x_probe(): device id = 0x20016410
+Info:    stm32x.c:677 stm32x_probe(): flash size = 128kbytes
+Info:    options.c:50 configuration_output_handler(): stm32x mass erase complete
+Info:    options.c:50 configuration_output_handler(): wrote 8080 byte from file ../Debug/LED.hex in 0.904800s (8.720850 kb/s)
