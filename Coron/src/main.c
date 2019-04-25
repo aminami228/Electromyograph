@@ -49,6 +49,9 @@ int main(void){
    	LD3_ON;					//LD3Çì_ìî
    	wait_timer_msec(500);	//500msecë“ã@
    	LD3_OFF;				//LD3Çè¡ìî
+   	LD1_ON;
+   	LD2_ON;
+   	LD3_ON;
    	
    	// starts when SW is pressed
    	while (!SW_USER);		// wait for SW being pushed
@@ -73,7 +76,7 @@ int main(void){
    	while(1){								// infinite loop
    		int x,y;
    		LD1_ON;
-   		USB_puts("   IOA0_AD = ");			// send message to ptrint it on PC
+   		USB_puts("\r\n   IOA0_AD = ");		// send message to ptrint it on PC
    		USB_putn(coron_IOA_ADValue[0],4);	// print AD value of IOA0 (12bits)
    		
    		/*
