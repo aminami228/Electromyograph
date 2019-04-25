@@ -297,643 +297,643 @@ LOAD c:/coron/gcc/arm/bin/../lib/gcc/arm-none-eabi/4.4.1/crtbegin.o
  *(.flashtext)
                 0x08003130                . = ALIGN (0x4)
 
-.text           0x08003130    0x12d78
+.text           0x08003130    0x12d80
                 0x08003130                . = ALIGN (0x4)
  ./src/main.o(.text.)
  *(.text)
- .text          0x08003130      0x274 ./src/main.o
+ .text          0x08003130      0x27c ./src/main.o
                 0x08003130                main
- .text          0x080033a4      0x330 ./src/stm32f10x_it.o
-                0x080033a4                NMIException
-                0x080033b0                HardFaultException
-                0x080033b8                MemManageException
-                0x080033c0                BusFaultException
-                0x080033c8                UsageFaultException
-                0x080033d0                DebugMonitor
-                0x080033dc                SVCHandler
-                0x080033e8                PendSVC
-                0x080033f4                SysTickHandler
-                0x08003400                WWDG_IRQHandler
-                0x0800340c                PVD_IRQHandler
-                0x08003418                TAMPER_IRQHandler
-                0x08003424                RTC_IRQHandler
-                0x08003430                FLASH_IRQHandler
-                0x0800343c                RCC_IRQHandler
-                0x08003448                EXTI0_IRQHandler
-                0x08003454                EXTI1_IRQHandler
-                0x08003460                EXTI2_IRQHandler
-                0x0800346c                EXTI3_IRQHandler
-                0x08003478                EXTI4_IRQHandler
-                0x08003484                DMAChannel1_IRQHandler
-                0x08003494                DMAChannel2_IRQHandler
-                0x080034a0                DMAChannel3_IRQHandler
-                0x080034ac                DMAChannel4_IRQHandler
-                0x080034b8                DMAChannel5_IRQHandler
-                0x080034c4                DMAChannel6_IRQHandler
-                0x080034d0                DMAChannel7_IRQHandler
-                0x080034dc                ADC_IRQHandler
-                0x080034e8                USB_HP_CAN_TX_IRQHandler
-                0x080034f4                USB_LP_CAN_RX0_IRQHandler
-                0x08003500                CAN_RX1_IRQHandler
-                0x0800350c                CAN_SCE_IRQHandler
-                0x08003518                EXTI9_5_IRQHandler
-                0x08003524                TIM1_BRK_IRQHandler
-                0x08003530                TIM1_UP_IRQHandler
-                0x0800353c                TIM1_TRG_COM_IRQHandler
-                0x08003548                TIM1_CC_IRQHandler
-                0x08003554                TIM2_IRQHandler
-                0x08003560                TIM3_IRQHandler
-                0x0800356c                TIM4_IRQHandler
-                0x08003578                I2C1_EV_IRQHandler
-                0x08003584                I2C1_ER_IRQHandler
-                0x08003590                I2C2_EV_IRQHandler
-                0x0800359c                I2C2_ER_IRQHandler
-                0x080035a8                SPI1_IRQHandler
-                0x080035b4                SPI2_IRQHandler
-                0x080035c0                USART1_IRQHandler
-                0x080035cc                USART2_IRQHandler
-                0x080035d8                USART3_IRQHandler
-                0x080035e4                EXTI15_10_IRQHandler
-                0x080035f0                RTCAlarm_IRQHandler
-                0x080035fc                USBWakeUp_IRQHandler
-                0x08003608                TIM8_BRK_IRQHandler
-                0x08003614                TIM8_UP_IRQHandler
-                0x08003620                TIM8_TRG_COM_IRQHandler
-                0x0800362c                TIM8_CC_IRQHandler
-                0x08003638                ADC3_IRQHandler
-                0x08003644                FSMC_IRQHandler
-                0x08003650                SDIO_IRQHandler
-                0x0800365c                TIM5_IRQHandler
-                0x08003668                SPI3_IRQHandler
-                0x08003674                UART4_IRQHandler
-                0x08003680                UART5_IRQHandler
-                0x0800368c                TIM6_IRQHandler
-                0x08003698                TIM7_IRQHandler
-                0x080036a4                DMA2_Channel1_IRQHandler
-                0x080036b0                DMA2_Channel2_IRQHandler
-                0x080036bc                DMA2_Channel3_IRQHandler
-                0x080036c8                DMA2_Channel4_5_IRQHandler
- .text          0x080036d4      0x304 ./lib/src/coron_ad.o
-                0x080036d4                IOA_AD_init
-                0x08003988                AD_enable
-                0x080039b0                AD_disable
- .text          0x080039d8      0x6a8 ./lib/src/coron_dc.o
-                0x080039d8                TIM2_DCmotor_pwm
-                0x08003d40                DC_init
-                0x08003fe0                DC_enable
-                0x08004010                DC_disable
- .text          0x08004080      0x218 ./lib/src/coron_init.o
-                0x08004080                wait_power
-                0x080040b0                coron_init
-                0x08004134                coron_RCC_Configuration
-                0x080041cc                coron_GPIO_Configuration
-                0x08004278                coron_NVIC_Configuration
- .text          0x08004298      0xdb4 ./lib/src/coron_rc.o
-                0x08004298                TIM3_RC1_IRQ
-                0x08004554                TIM4_RC2_IRQ
-                0x08004818                TIM6_RC_Speed
-                0x08004984                RC_exeHomePosition
-                0x08004a04                RC_init
-                0x08004f4c                RC_enable
-                0x08004f84                RC_disable
-                0x08004fbc                RC_move
- .text          0x0800504c      0xf38 ./lib/src/coron_sdfat.o
-                0x0800504c                SD_FATinit
-                0x08005178                SD_read
-                0x08005274                SD_write
-                0x08005348                SD_char_to_num
-                0x080056ac                SD_num_to_char
-                0x08005a24                SD_getDirSector
-                0x08005bb4                SD_getFileList
-                0x08005e30                SD_serchDirectory
- .text          0x08005f84      0x868 ./lib/src/coron_sdtxt.o
-                0x08005f84                SD_search_txt
-                0x08005fe8                SD_txt_USBput
-                0x08006208                SD_txt_UARTput
-                0x08006428                SD_txt_read_c
-                0x08006488                SD_txt_write_c
-                0x08006508                SD_txt_read_s
-                0x0800666c                SD_txt_write_s
- .text          0x080067ec      0x368 ./lib/src/coron_sdwav.o
-                0x080067ec                SD_search_wav
-                0x08006850                SD_play_wav
- .text          0x08006b54      0x2dc ./lib/src/coron_sound.o
-                0x08006b54                SPK_init
-                0x08006cbc                TIM5_SOUND_IRQ
- .text          0x08006e30      0x7c8 ./lib/src/coron_uart.o
-                0x08006e30                UART_init
-                0x08006ef8                UART_putc
-                0x08006f30                UART_puts
-                0x08006f6c                UART_putd
-                0x08006fac                UART_getc
-                0x08006fec                UART_gets
-                0x08007044                UART_put_x16
-                0x08007074                UART_putx
-                0x08007240                UART_putn
- .text          0x080075f8      0x220 ./lib/src/coron_usbcdc.o
-                0x080075f8                Set_USBClock
-                0x08007614                Enter_LowPowerMode
-                0x0800762c                Leave_LowPowerMode
-                0x0800766c                USB_Interrupts_Config
-                0x080076bc                USB_Cable_Config
-                0x080076f8                Get_SerialNum
- .text          0x08007818      0x9cc ./lib/src/coron_usbprint.o
-                0x08007818                put_x16
-                0x08007848                USB_putx
-                0x08007a14                USB_putn
-                0x08007dcc                USB_putc
-                0x08007e9c                USB_puts
-                0x08007f94                USB_putd
-                0x08008060                USB_getc
-                0x080080d4                USB_gets
-                0x08008144                USB_getr
-                0x080081c8                USB_getd
- .text          0x080081e4      0x210 ./lib/src/coron_wait.o
-                0x080081e4                wait_loop
-                0x0800820c                wait_init
-                0x08008218                Handler_SysTick
-                0x08008258                SysTick_Configuration
-                0x08008280                wait_timer
-                0x080082dc                wait_timer_sec
-                0x0800833c                wait_timer_msec
-                0x08008398                wait_timer_usec
- .text          0x080083f4       0x6e ./lib/src/cortexm3_macro.o
-                0x080083f4                __WFI
-                0x080083f8                __WFE
-                0x080083fc                __SEV
-                0x08008400                __ISB
-                0x08008406                __DSB
-                0x0800840c                __DMB
-                0x08008412                __SVC
-                0x08008416                __MRS_CONTROL
-                0x0800841c                __MSR_CONTROL
-                0x08008426                __MRS_PSP
-                0x0800842c                __MSR_PSP
-                0x08008432                __MRS_MSP
-                0x08008438                __MSR_MSP
-                0x0800843e                __SETPRIMASK
-                0x08008442                __RESETPRIMASK
-                0x08008446                __SETFAULTMASK
-                0x0800844a                __RESETFAULTMASK
-                0x0800844e                __BASEPRICONFIG
-                0x08008454                __GetBASEPRI
-                0x0800845a                __REV_HalfWord
-                0x0800845e                __REV_Word
- *fill*         0x08008462        0x2 00
- .text          0x08008464     0x40f0 ./lib/src/sdcard.o
-                0x08008464                SD_Init
-                0x08008590                SD_PowerON
-                0x08008908                SD_PowerOFF
-                0x08008928                SD_InitializeCards
-                0x08008b9c                SD_GetCardInfo
-                0x08009280                SD_EnableWideBusOperation
-                0x080093e4                SD_SetDeviceMode
-                0x08009428                SD_SelectDeselect
-                0x080094a0                SD_ReadBlock
-                0x080098f4                SD_ReadMultiBlocks
-                0x08009e50                SD_WriteBlock
-                0x0800a4c4                SD_WriteMultiBlocks
-                0x0800ac58                SD_GetTransferState
-                0x0800ac80                SD_StopTransfer
-                0x0800acf8                SD_Erase
-                0x0800af48                SD_SendStatus
-                0x0800aff4                SD_SendSDStatus
-                0x0800b360                SD_ProcessIRQSrc
- .text          0x0800c554      0xb4c ./lib/src/stm32f10x_adc.o
-                0x0800c554                ADC_DeInit
-                0x0800c5dc                ADC_Init
-                0x0800c6a0                ADC_StructInit
-                0x0800c6e4                ADC_Cmd
-                0x0800c71c                ADC_DMACmd
-                0x0800c754                ADC_ITConfig
-                0x0800c7a0                ADC_ResetCalibration
-                0x0800c7c0                ADC_GetResetCalibrationStatus
-                0x0800c7f8                ADC_StartCalibration
-                0x0800c818                ADC_GetCalibrationStatus
-                0x0800c850                ADC_SoftwareStartConvCmd
-                0x0800c888                ADC_GetSoftwareStartConvStatus
-                0x0800c8c0                ADC_DiscModeChannelCountConfig
-                0x0800c90c                ADC_DiscModeCmd
-                0x0800c944                ADC_RegularChannelConfig
-                0x0800cb14                ADC_ExternalTrigConvCmd
-                0x0800cb4c                ADC_GetConversionValue
-                0x0800cb68                ADC_GetDualModeConversionValue
-                0x0800cb80                ADC_AutoInjectedConvCmd
-                0x0800cbb8                ADC_InjectedDiscModeCmd
-                0x0800cbf0                ADC_ExternalTrigInjectedConvConfig
-                0x0800cc28                ADC_ExternalTrigInjectedConvCmd
-                0x0800cc60                ADC_SoftwareStartInjectedConvCmd
-                0x0800cc98                ADC_GetSoftwareStartInjectedConvCmdStatus
-                0x0800ccd0                ADC_InjectedChannelConfig
-                0x0800ce20                ADC_InjectedSequencerLengthConfig
-                0x0800ce6c                ADC_SetInjectedOffset
-                0x0800ce94                ADC_GetInjectedConversionValue
-                0x0800cec0                ADC_AnalogWatchdogCmd
-                0x0800cefc                ADC_AnalogWatchdogThresholdsConfig
-                0x0800cf24                ADC_AnalogWatchdogSingleChannelConfig
-                0x0800cf60                ADC_TempSensorVrefintCmd
-                0x0800cfac                ADC_GetFlagStatus
-                0x0800cfe8                ADC_ClearFlag
-                0x0800d008                ADC_GetITStatus
-                0x0800d070                ADC_ClearITPendingBit
- .text          0x0800d0a0      0x38c ./lib/src/stm32f10x_dac.o
-                0x0800d0a0                DAC_DeInit
-                0x0800d0c0                DAC_Init
-                0x0800d13c                DAC_StructInit
-                0x0800d170                DAC_Cmd
-                0x0800d1d8                DAC_DMACmd
-                0x0800d240                DAC_SoftwareTriggerCmd
-                0x0800d2b0                DAC_DualSoftwareTriggerCmd
-                0x0800d2fc                DAC_WaveGenerationCmd
-                0x0800d360                DAC_SetChannel1Data
-                0x0800d388                DAC_SetChannel2Data
-                0x0800d3b0                DAC_SetDualChannelData
-                0x0800d404                DAC_GetDataOutputValue
- .text          0x0800d42c      0x500 ./lib/src/stm32f10x_dma.o
-                0x0800d42c                DMA_DeInit
-                0x0800d66c                DMA_Init
-                0x0800d6fc                DMA_StructInit
-                0x0800d768                DMA_Cmd
-                0x0800d7a0                DMA_ITConfig
-                0x0800d7e0                DMA_GetCurrDataCounter
-                0x0800d7fc                DMA_GetFlagStatus
-                0x0800d85c                DMA_ClearFlag
-                0x0800d894                DMA_GetITStatus
-                0x0800d8f4                DMA_ClearITPendingBit
- .text          0x0800d92c       0xcc ./lib/src/stm32f10x_flash.o
-                0x0800d92c                FLASH_SetLatency
-                0x0800d970                FLASH_HalfCycleAccessCmd
-                0x0800d9b4                FLASH_PrefetchBufferCmd
- .text          0x0800d9f8      0x6e8 ./lib/src/stm32f10x_gpio.o
-                0x0800d9f8                GPIO_DeInit
-                0x0800db28                GPIO_AFIODeInit
-                0x0800db48                GPIO_Init
-                0x0800dd08                GPIO_StructInit
-                0x0800dd34                GPIO_ReadInputDataBit
-                0x0800dd70                GPIO_ReadInputData
-                0x0800dd8c                GPIO_ReadOutputDataBit
-                0x0800ddc8                GPIO_ReadOutputData
-                0x0800dde4                GPIO_SetBits
-                0x0800de00                GPIO_ResetBits
-                0x0800de1c                GPIO_WriteBit
-                0x0800de4c                GPIO_Write
-                0x0800de68                GPIO_PinLockConfig
-                0x0800deac                GPIO_EventOutputConfig
-                0x0800df0c                GPIO_EventOutputCmd
-                0x0800df2c                GPIO_PinRemapConfig
-                0x0800e028                GPIO_EXTILineConfig
- .text          0x0800e0e0      0x974 ./lib/src/stm32f10x_nvic.o
-                0x0800e0e0                NVIC_DeInit
-                0x0800e164                NVIC_SCBDeInit
-                0x0800e228                NVIC_PriorityGroupConfig
-                0x0800e250                NVIC_Init
-                0x0800e3b4                NVIC_StructInit
-                0x0800e3e8                NVIC_SETPRIMASK
-                0x0800e3f4                NVIC_RESETPRIMASK
-                0x0800e400                NVIC_SETFAULTMASK
-                0x0800e40c                NVIC_RESETFAULTMASK
-                0x0800e418                NVIC_BASEPRICONFIG
-                0x0800e434                NVIC_GetBASEPRI
-                0x0800e444                NVIC_GetCurrentPendingIRQChannel
-                0x0800e46c                NVIC_GetIRQChannelPendingBitStatus
-                0x0800e4d4                NVIC_SetIRQChannelPendingBit
-                0x0800e4f4                NVIC_ClearIRQChannelPendingBit
-                0x0800e530                NVIC_GetCurrentActiveHandler
-                0x0800e550                NVIC_GetIRQChannelActiveBitStatus
-                0x0800e5b8                NVIC_GetCPUID
-                0x0800e5d0                NVIC_SetVectorTable
-                0x0800e600                NVIC_GenerateSystemReset
-                0x0800e61c                NVIC_GenerateCoreReset
-                0x0800e638                NVIC_SystemLPConfig
-                0x0800e690                NVIC_SystemHandlerConfig
-                0x0800e6fc                NVIC_SystemHandlerPriorityConfig
-                0x0800e80c                NVIC_GetSystemHandlerPendingBitStatus
-                0x0800e878                NVIC_SetSystemHandlerPendingBit
-                0x0800e8bc                NVIC_ClearSystemHandlerPendingBit
-                0x0800e904                NVIC_GetSystemHandlerActiveBitStatus
-                0x0800e96c                NVIC_GetFaultHandlerSources
-                0x0800ea04                NVIC_GetFaultAddress
- .text          0x0800ea54      0xa04 ./lib/src/stm32f10x_rcc.o
-                0x0800ea54                RCC_DeInit
-                0x0800eaf0                RCC_HSEConfig
-                0x0800eb74                RCC_WaitForHSEStartUp
-                0x0800ebd8                RCC_AdjustHSICalibrationValue
-                0x0800ec20                RCC_HSICmd
-                0x0800ec40                RCC_PLLConfig
-                0x0800ec8c                RCC_PLLCmd
-                0x0800ecac                RCC_SYSCLKConfig
-                0x0800ecf0                RCC_GetSYSCLKSource
-                0x0800ed0c                RCC_HCLKConfig
-                0x0800ed50                RCC_PCLK1Config
-                0x0800ed94                RCC_PCLK2Config
-                0x0800eddc                RCC_ITConfig
-                0x0800ee40                RCC_USBCLKConfig
-                0x0800ee60                RCC_ADCCLKConfig
-                0x0800eea4                RCC_LSEConfig
-                0x0800ef00                RCC_LSICmd
-                0x0800ef20                RCC_RTCCLKConfig
-                0x0800ef4c                RCC_RTCCLKCmd
-                0x0800ef6c                RCC_GetClocksFreq
-                0x0800f12c                RCC_AHBPeriphClockCmd
-                0x0800f184                RCC_APB2PeriphClockCmd
-                0x0800f1dc                RCC_APB1PeriphClockCmd
-                0x0800f234                RCC_APB2PeriphResetCmd
-                0x0800f28c                RCC_APB1PeriphResetCmd
-                0x0800f2e4                RCC_BackupResetCmd
-                0x0800f304                RCC_ClockSecuritySystemCmd
-                0x0800f324                RCC_MCOConfig
-                0x0800f344                RCC_GetFlagStatus
-                0x0800f3d4                RCC_ClearFlag
-                0x0800f3f8                RCC_GetITStatus
-                0x0800f438                RCC_ClearITPendingBit
- .text          0x0800f458      0x614 ./lib/src/stm32f10x_sdio.o
-                0x0800f458                SDIO_DeInit
-                0x0800f4e4                SDIO_Init
-                0x0800f558                SDIO_StructInit
-                0x0800f59c                SDIO_ClockCmd
-                0x0800f5bc                SDIO_SetPowerState
-                0x0800f600                SDIO_GetPowerState
-                0x0800f61c                SDIO_ITConfig
-                0x0800f674                SDIO_DMACmd
-                0x0800f694                SDIO_SendCommand
-                0x0800f704                SDIO_CmdStructInit
-                0x0800f740                SDIO_GetCommandResponse
-                0x0800f758                SDIO_GetResponse
-                0x0800f77c                SDIO_DataConfig
-                0x0800f7f4                SDIO_DataStructInit
-                0x0800f838                SDIO_GetDataCounter
-                0x0800f850                SDIO_ReadData
-                0x0800f868                SDIO_WriteData
-                0x0800f888                SDIO_GetFIFOCount
-                0x0800f8a0                SDIO_StartSDIOReadWait
-                0x0800f8c0                SDIO_StopSDIOReadWait
-                0x0800f8e0                SDIO_SetSDIOReadWaitMode
-                0x0800f900                SDIO_SetSDIOOperation
-                0x0800f920                SDIO_SendSDIOSuspendCmd
-                0x0800f940                SDIO_CommandCompletionCmd
-                0x0800f960                SDIO_CEATAITCmd
-                0x0800f98c                SDIO_SendCEATACmd
-                0x0800f9ac                SDIO_GetFlagStatus
-                0x0800f9ec                SDIO_ClearFlag
-                0x0800fa0c                SDIO_GetITStatus
-                0x0800fa4c                SDIO_ClearITPendingBit
- .text          0x0800fa6c      0x1a8 ./lib/src/stm32f10x_systick.o
-                0x0800fa6c                SysTick_CLKSourceConfig
-                0x0800fab8                SysTick_SetReload
-                0x0800fad8                SysTick_CounterCmd
-                0x0800fb3c                SysTick_ITConfig
-                0x0800fb88                SysTick_GetCounter
-                0x0800fba0                SysTick_GetFlagStatus
- .text          0x0800fc14     0x1e6c ./lib/src/stm32f10x_tim.o
-                0x0800fc14                TIM_DeInit
-                0x0800fd70                TIM_TimeBaseInit
-                0x0800fdf4                TIM_OC1Init
-                0x0800ff1c                TIM_OC2Init
-                0x0801006c                TIM_OC3Init
-                0x080101b8                TIM_OC4Init
-                0x080102b0                TIM_ICInit
-                0x08010358                TIM_PWMIConfig
-                0x0801041c                TIM_BDTRConfig
-                0x08010478                TIM_TimeBaseStructInit
-                0x080104b4                TIM_OCStructInit
-                0x08010508                TIM_ICStructInit
-                0x08010544                TIM_BDTRStructInit
-                0x08010590                TIM_Cmd
-                0x080105d8                TIM_CtrlPWMOutputs
-                0x08010624                TIM_ITConfig
-                0x08010670                TIM_GenerateEvent
-                0x0801068c                TIM_DMAConfig
-                0x080106b8                TIM_DMACmd
-                0x08010704                TIM_InternalClockConfig
-                0x08010730                TIM_ITRxExternalClockConfig
-                0x08010760                TIM_TIxExternalClockConfig
-                0x080107b8                TIM_ETRClockMode1Config
-                0x0801080c                TIM_ETRClockMode2Config
-                0x08010840                TIM_ETRConfig
-                0x08010894                TIM_PrescalerConfig
-                0x080108bc                TIM_CounterModeConfig
-                0x08010900                TIM_SelectInputTrigger
-                0x0801093c                TIM_EncoderInterfaceConfig
-                0x080109d4                TIM_ForcedOC1Config
-                0x08010a10                TIM_ForcedOC2Config
-                0x08010a50                TIM_ForcedOC3Config
-                0x08010a8c                TIM_ForcedOC4Config
-                0x08010acc                TIM_ARRPreloadConfig
-                0x08010b14                TIM_SelectCOM
-                0x08010b5c                TIM_SelectCCDMA
-                0x08010ba4                TIM_CCPreloadControl
-                0x08010bec                TIM_OC1PreloadConfig
-                0x08010c28                TIM_OC2PreloadConfig
-                0x08010c68                TIM_OC3PreloadConfig
-                0x08010ca4                TIM_OC4PreloadConfig
-                0x08010ce4                TIM_OC1FastConfig
-                0x08010d20                TIM_OC2FastConfig
-                0x08010d60                TIM_OC3FastConfig
-                0x08010d9c                TIM_OC4FastConfig
-                0x08010ddc                TIM_ClearOC1Ref
-                0x08010e18                TIM_ClearOC2Ref
-                0x08010e5c                TIM_ClearOC3Ref
-                0x08010e98                TIM_ClearOC4Ref
-                0x08010edc                TIM_OC1PolarityConfig
-                0x08010f18                TIM_OC1NPolarityConfig
-                0x08010f54                TIM_OC2PolarityConfig
-                0x08010f94                TIM_OC2NPolarityConfig
-                0x08010fd4                TIM_OC3PolarityConfig
-                0x08011014                TIM_OC3NPolarityConfig
-                0x08011054                TIM_OC4PolarityConfig
-                0x08011094                TIM_CCxCmd
-                0x080110ec                TIM_CCxNCmd
-                0x08011144                TIM_SelectOCxM
-                0x08011284                TIM_UpdateDisableConfig
-                0x080112cc                TIM_UpdateRequestConfig
-                0x08011314                TIM_SelectHallSensor
-                0x0801135c                TIM_SelectOnePulseMode
-                0x080113a0                TIM_SelectOutputTrigger
-                0x080113e4                TIM_SelectSlaveMode
-                0x08011428                TIM_SelectMasterSlaveMode
-                0x0801146c                TIM_SetCounter
-                0x08011488                TIM_SetAutoreload
-                0x080114a4                TIM_SetCompare1
-                0x080114c0                TIM_SetCompare2
-                0x080114dc                TIM_SetCompare3
-                0x080114f8                TIM_SetCompare4
-                0x08011518                TIM_SetIC1Prescaler
-                0x0801155c                TIM_SetIC2Prescaler
-                0x080115a4                TIM_SetIC3Prescaler
-                0x080115e8                TIM_SetIC4Prescaler
-                0x08011630                TIM_SetClockDivision
-                0x08011668                TIM_GetCapture1
-                0x08011684                TIM_GetCapture2
-                0x080116a0                TIM_GetCapture3
-                0x080116bc                TIM_GetCapture4
-                0x080116d8                TIM_GetCounter
-                0x080116f4                TIM_GetPrescaler
-                0x08011710                TIM_GetFlagStatus
-                0x08011750                TIM_ClearFlag
-                0x08011774                TIM_GetITStatus
-                0x080117d8                TIM_ClearITPendingBit
- .text          0x08011a80      0x97c ./lib/src/stm32f10x_usart.o
-                0x08011a80                USART_DeInit
-                0x08011b60                USART_Init
-                0x08011ccc                USART_StructInit
-                0x08011d10                USART_ClockInit
-                0x08011d74                USART_ClockStructInit
-                0x08011da8                USART_Cmd
-                0x08011df0                USART_ITConfig
-                0x08011e9c                USART_DMACmd
-                0x08011ee8                USART_SetAddress
-                0x08011f2c                USART_WakeUpConfig
-                0x08011f70                USART_ReceiverWakeUpCmd
-                0x08011fb8                USART_LINBreakDetectLengthConfig
-                0x08011ffc                USART_LINCmd
-                0x08012044                USART_SendData
-                0x08012068                USART_ReceiveData
-                0x0801208c                USART_SendBreak
-                0x080120b0                USART_SetGuardTime
-                0x080120ec                USART_SetPrescaler
-                0x08012124                USART_SmartCardCmd
-                0x0801216c                USART_SmartCardNACKCmd
-                0x080121b4                USART_HalfDuplexCmd
-                0x080121fc                USART_IrDAConfig
-                0x08012240                USART_IrDACmd
-                0x08012288                USART_GetFlagStatus
-                0x080122c8                USART_ClearFlag
-                0x080122ec                USART_GetITStatus
-                0x080123b8                USART_ClearITPendingBit
- .text          0x080123fc       0x88 ./lib/src/stm32f10x_vector.o
-                0x080123fc                Reset_Handler
- .text          0x08012484     0x1428 ./lib/src/usb_core.o
-                0x08012484                Standard_GetConfiguration
-                0x080124d0                Standard_SetConfiguration
-                0x08012544                Standard_GetInterface
-                0x08012590                Standard_SetInterface
-                0x08012658                Standard_GetStatus
-                0x08012800                Standard_ClearFeature
-                0x08012a28                Standard_SetEndPointFeature
-                0x08012b68                Standard_SetDeviceFeature
-                0x08012ba4                Standard_GetDescriptorData
-                0x0801355c                Setup0_Process
-                0x0801366c                In0_Process
-                0x08013728                Out0_Process
-                0x080137b4                Post0_Process
-                0x08013814                SetDeviceAddress
-                0x080138a0                NOP_Process
- .text          0x080138ac       0x5c ./lib/src/usb_endp.o
-                0x080138ac                EP3_OUT_Callback
-                0x080138f0                EP1_IN_Callback
- .text          0x08013908       0x5c ./lib/src/usb_init.o
-                0x08013908                USB_Init
- .text          0x08013964      0x700 ./lib/src/usb_int.o
-                0x08013964                CTR_LP
-                0x08013f0c                CTR_HP
- .text          0x08014064      0x170 ./lib/src/usb_istr.o
-                0x08014064                USB_Istr
- .text          0x080141d4       0xf8 ./lib/src/usb_mem.o
-                0x080141d4                UserToPMABufferCopy
-                0x08014260                PMAToUserBufferCopy
- .text          0x080142cc      0x46c ./lib/src/usb_prop.o
-                0x080142cc                Virtual_Com_Port_init
-                0x0801432c                Virtual_Com_Port_Reset
-                0x0801447c                Virtual_Com_Port_SetConfiguration
-                0x080144ac                Virtual_Com_Port_SetDeviceAddress
-                0x080144c4                Virtual_Com_Port_Status_In
-                0x080144ec                Virtual_Com_Port_Status_Out
-                0x080144f8                Virtual_Com_Port_Data_Setup
-                0x080145a4                Virtual_Com_Port_NoData_Setup
-                0x080145ec                Virtual_Com_Port_GetDeviceDescriptor
-                0x08014614                Virtual_Com_Port_GetConfigDescriptor
-                0x0801463c                Virtual_Com_Port_GetStringDescriptor
-                0x08014688                Virtual_Com_Port_Get_Interface_Setting
-                0x080146c0                Virtual_Com_Port_GetLineCoding
-                0x080146fc                Virtual_Com_Port_SetLineCoding
- .text          0x08014738      0x2dc ./lib/src/usb_pwr.o
-                0x08014738                PowerOn
-                0x080147b8                PowerOff
-                0x080147f8                Suspend
-                0x0801484c                Resume_Init
-                0x0801488c                Resume
- .text          0x08014a14     0x1228 ./lib/src/usb_regs.o
-                0x08014a14                SetCNTR
-                0x08014a34                GetCNTR
-                0x08014a4c                SetISTR
-                0x08014a6c                GetISTR
-                0x08014a84                GetFNR
-                0x08014a9c                SetDADDR
-                0x08014abc                GetDADDR
-                0x08014ad4                SetBTABLE
-                0x08014b00                GetBTABLE
-                0x08014b18                SetENDPOINT
-                0x08014b44                GetENDPOINT
-                0x08014b6c                SetEPType
-                0x08014bc0                GetEPType
-                0x08014bec                SetEPTxStatus
-                0x08014c58                SetEPRxStatus
-                0x08014cc4                SetDouBleBuffEPStall
-                0x08014d20                GetEPTxStatus
-                0x08014d4c                GetEPRxStatus
-                0x08014d78                SetEPTxValid
-                0x08014dcc                SetEPRxValid
-                0x08014e20                SetEP_KIND
-                0x08014e6c                ClearEP_KIND
-                0x08014eb0                Clear_Status_Out
-                0x08014ef4                Set_Status_Out
-                0x08014f40                SetEPDoubleBuff
-                0x08014f8c                ClearEPDoubleBuff
-                0x08014fd0                GetTxStallStatus
-                0x08015004                GetRxStallStatus
-                0x0801503c                ClearEP_CTR_RX
-                0x08015080                ClearEP_CTR_TX
-                0x080150c4                ToggleDTOG_RX
-                0x08015108                ToggleDTOG_TX
-                0x0801514c                ClearDTOG_RX
-                0x080151ac                ClearDTOG_TX
-                0x0801520c                SetEPAddress
-                0x0801525c                GetEPAddress
-                0x08015288                SetEPTxAddr
-                0x080152d0                SetEPRxAddr
-                0x0801531c                GetEPTxAddr
-                0x08015358                GetEPRxAddr
-                0x08015398                SetEPTxCount
-                0x080153d8                SetEPCountRxReg
-                0x08015448                SetEPRxCount
-                0x080154e0                GetEPTxCount
-                0x08015528                GetEPRxCount
-                0x08015570                SetEPDblBuffAddr
-                0x080155f0                SetEPDblBuf0Addr
-                0x08015638                SetEPDblBuf1Addr
-                0x08015684                GetEPDblBuf0Addr
-                0x080156c0                GetEPDblBuf1Addr
-                0x08015700                SetEPDblBuffCount
-                0x08015888                SetEPDblBuf0Count
-                0x0801595c                SetEPDblBuf1Count
-                0x08015a30                GetEPDblBuf0Count
-                0x08015a78                GetEPDblBuf1Count
-                0x08015ac0                GetEPDblBufDir
-                0x08015b4c                FreeUserBuffer
-                0x08015bd4                ToWord
-                0x08015c04                ByteSwap
+ .text          0x080033ac      0x330 ./src/stm32f10x_it.o
+                0x080033ac                NMIException
+                0x080033b8                HardFaultException
+                0x080033c0                MemManageException
+                0x080033c8                BusFaultException
+                0x080033d0                UsageFaultException
+                0x080033d8                DebugMonitor
+                0x080033e4                SVCHandler
+                0x080033f0                PendSVC
+                0x080033fc                SysTickHandler
+                0x08003408                WWDG_IRQHandler
+                0x08003414                PVD_IRQHandler
+                0x08003420                TAMPER_IRQHandler
+                0x0800342c                RTC_IRQHandler
+                0x08003438                FLASH_IRQHandler
+                0x08003444                RCC_IRQHandler
+                0x08003450                EXTI0_IRQHandler
+                0x0800345c                EXTI1_IRQHandler
+                0x08003468                EXTI2_IRQHandler
+                0x08003474                EXTI3_IRQHandler
+                0x08003480                EXTI4_IRQHandler
+                0x0800348c                DMAChannel1_IRQHandler
+                0x0800349c                DMAChannel2_IRQHandler
+                0x080034a8                DMAChannel3_IRQHandler
+                0x080034b4                DMAChannel4_IRQHandler
+                0x080034c0                DMAChannel5_IRQHandler
+                0x080034cc                DMAChannel6_IRQHandler
+                0x080034d8                DMAChannel7_IRQHandler
+                0x080034e4                ADC_IRQHandler
+                0x080034f0                USB_HP_CAN_TX_IRQHandler
+                0x080034fc                USB_LP_CAN_RX0_IRQHandler
+                0x08003508                CAN_RX1_IRQHandler
+                0x08003514                CAN_SCE_IRQHandler
+                0x08003520                EXTI9_5_IRQHandler
+                0x0800352c                TIM1_BRK_IRQHandler
+                0x08003538                TIM1_UP_IRQHandler
+                0x08003544                TIM1_TRG_COM_IRQHandler
+                0x08003550                TIM1_CC_IRQHandler
+                0x0800355c                TIM2_IRQHandler
+                0x08003568                TIM3_IRQHandler
+                0x08003574                TIM4_IRQHandler
+                0x08003580                I2C1_EV_IRQHandler
+                0x0800358c                I2C1_ER_IRQHandler
+                0x08003598                I2C2_EV_IRQHandler
+                0x080035a4                I2C2_ER_IRQHandler
+                0x080035b0                SPI1_IRQHandler
+                0x080035bc                SPI2_IRQHandler
+                0x080035c8                USART1_IRQHandler
+                0x080035d4                USART2_IRQHandler
+                0x080035e0                USART3_IRQHandler
+                0x080035ec                EXTI15_10_IRQHandler
+                0x080035f8                RTCAlarm_IRQHandler
+                0x08003604                USBWakeUp_IRQHandler
+                0x08003610                TIM8_BRK_IRQHandler
+                0x0800361c                TIM8_UP_IRQHandler
+                0x08003628                TIM8_TRG_COM_IRQHandler
+                0x08003634                TIM8_CC_IRQHandler
+                0x08003640                ADC3_IRQHandler
+                0x0800364c                FSMC_IRQHandler
+                0x08003658                SDIO_IRQHandler
+                0x08003664                TIM5_IRQHandler
+                0x08003670                SPI3_IRQHandler
+                0x0800367c                UART4_IRQHandler
+                0x08003688                UART5_IRQHandler
+                0x08003694                TIM6_IRQHandler
+                0x080036a0                TIM7_IRQHandler
+                0x080036ac                DMA2_Channel1_IRQHandler
+                0x080036b8                DMA2_Channel2_IRQHandler
+                0x080036c4                DMA2_Channel3_IRQHandler
+                0x080036d0                DMA2_Channel4_5_IRQHandler
+ .text          0x080036dc      0x304 ./lib/src/coron_ad.o
+                0x080036dc                IOA_AD_init
+                0x08003990                AD_enable
+                0x080039b8                AD_disable
+ .text          0x080039e0      0x6a8 ./lib/src/coron_dc.o
+                0x080039e0                TIM2_DCmotor_pwm
+                0x08003d48                DC_init
+                0x08003fe8                DC_enable
+                0x08004018                DC_disable
+ .text          0x08004088      0x218 ./lib/src/coron_init.o
+                0x08004088                wait_power
+                0x080040b8                coron_init
+                0x0800413c                coron_RCC_Configuration
+                0x080041d4                coron_GPIO_Configuration
+                0x08004280                coron_NVIC_Configuration
+ .text          0x080042a0      0xdb4 ./lib/src/coron_rc.o
+                0x080042a0                TIM3_RC1_IRQ
+                0x0800455c                TIM4_RC2_IRQ
+                0x08004820                TIM6_RC_Speed
+                0x0800498c                RC_exeHomePosition
+                0x08004a0c                RC_init
+                0x08004f54                RC_enable
+                0x08004f8c                RC_disable
+                0x08004fc4                RC_move
+ .text          0x08005054      0xf38 ./lib/src/coron_sdfat.o
+                0x08005054                SD_FATinit
+                0x08005180                SD_read
+                0x0800527c                SD_write
+                0x08005350                SD_char_to_num
+                0x080056b4                SD_num_to_char
+                0x08005a2c                SD_getDirSector
+                0x08005bbc                SD_getFileList
+                0x08005e38                SD_serchDirectory
+ .text          0x08005f8c      0x868 ./lib/src/coron_sdtxt.o
+                0x08005f8c                SD_search_txt
+                0x08005ff0                SD_txt_USBput
+                0x08006210                SD_txt_UARTput
+                0x08006430                SD_txt_read_c
+                0x08006490                SD_txt_write_c
+                0x08006510                SD_txt_read_s
+                0x08006674                SD_txt_write_s
+ .text          0x080067f4      0x368 ./lib/src/coron_sdwav.o
+                0x080067f4                SD_search_wav
+                0x08006858                SD_play_wav
+ .text          0x08006b5c      0x2dc ./lib/src/coron_sound.o
+                0x08006b5c                SPK_init
+                0x08006cc4                TIM5_SOUND_IRQ
+ .text          0x08006e38      0x7c8 ./lib/src/coron_uart.o
+                0x08006e38                UART_init
+                0x08006f00                UART_putc
+                0x08006f38                UART_puts
+                0x08006f74                UART_putd
+                0x08006fb4                UART_getc
+                0x08006ff4                UART_gets
+                0x0800704c                UART_put_x16
+                0x0800707c                UART_putx
+                0x08007248                UART_putn
+ .text          0x08007600      0x220 ./lib/src/coron_usbcdc.o
+                0x08007600                Set_USBClock
+                0x0800761c                Enter_LowPowerMode
+                0x08007634                Leave_LowPowerMode
+                0x08007674                USB_Interrupts_Config
+                0x080076c4                USB_Cable_Config
+                0x08007700                Get_SerialNum
+ .text          0x08007820      0x9cc ./lib/src/coron_usbprint.o
+                0x08007820                put_x16
+                0x08007850                USB_putx
+                0x08007a1c                USB_putn
+                0x08007dd4                USB_putc
+                0x08007ea4                USB_puts
+                0x08007f9c                USB_putd
+                0x08008068                USB_getc
+                0x080080dc                USB_gets
+                0x0800814c                USB_getr
+                0x080081d0                USB_getd
+ .text          0x080081ec      0x210 ./lib/src/coron_wait.o
+                0x080081ec                wait_loop
+                0x08008214                wait_init
+                0x08008220                Handler_SysTick
+                0x08008260                SysTick_Configuration
+                0x08008288                wait_timer
+                0x080082e4                wait_timer_sec
+                0x08008344                wait_timer_msec
+                0x080083a0                wait_timer_usec
+ .text          0x080083fc       0x6e ./lib/src/cortexm3_macro.o
+                0x080083fc                __WFI
+                0x08008400                __WFE
+                0x08008404                __SEV
+                0x08008408                __ISB
+                0x0800840e                __DSB
+                0x08008414                __DMB
+                0x0800841a                __SVC
+                0x0800841e                __MRS_CONTROL
+                0x08008424                __MSR_CONTROL
+                0x0800842e                __MRS_PSP
+                0x08008434                __MSR_PSP
+                0x0800843a                __MRS_MSP
+                0x08008440                __MSR_MSP
+                0x08008446                __SETPRIMASK
+                0x0800844a                __RESETPRIMASK
+                0x0800844e                __SETFAULTMASK
+                0x08008452                __RESETFAULTMASK
+                0x08008456                __BASEPRICONFIG
+                0x0800845c                __GetBASEPRI
+                0x08008462                __REV_HalfWord
+                0x08008466                __REV_Word
+ *fill*         0x0800846a        0x2 00
+ .text          0x0800846c     0x40f0 ./lib/src/sdcard.o
+                0x0800846c                SD_Init
+                0x08008598                SD_PowerON
+                0x08008910                SD_PowerOFF
+                0x08008930                SD_InitializeCards
+                0x08008ba4                SD_GetCardInfo
+                0x08009288                SD_EnableWideBusOperation
+                0x080093ec                SD_SetDeviceMode
+                0x08009430                SD_SelectDeselect
+                0x080094a8                SD_ReadBlock
+                0x080098fc                SD_ReadMultiBlocks
+                0x08009e58                SD_WriteBlock
+                0x0800a4cc                SD_WriteMultiBlocks
+                0x0800ac60                SD_GetTransferState
+                0x0800ac88                SD_StopTransfer
+                0x0800ad00                SD_Erase
+                0x0800af50                SD_SendStatus
+                0x0800affc                SD_SendSDStatus
+                0x0800b368                SD_ProcessIRQSrc
+ .text          0x0800c55c      0xb4c ./lib/src/stm32f10x_adc.o
+                0x0800c55c                ADC_DeInit
+                0x0800c5e4                ADC_Init
+                0x0800c6a8                ADC_StructInit
+                0x0800c6ec                ADC_Cmd
+                0x0800c724                ADC_DMACmd
+                0x0800c75c                ADC_ITConfig
+                0x0800c7a8                ADC_ResetCalibration
+                0x0800c7c8                ADC_GetResetCalibrationStatus
+                0x0800c800                ADC_StartCalibration
+                0x0800c820                ADC_GetCalibrationStatus
+                0x0800c858                ADC_SoftwareStartConvCmd
+                0x0800c890                ADC_GetSoftwareStartConvStatus
+                0x0800c8c8                ADC_DiscModeChannelCountConfig
+                0x0800c914                ADC_DiscModeCmd
+                0x0800c94c                ADC_RegularChannelConfig
+                0x0800cb1c                ADC_ExternalTrigConvCmd
+                0x0800cb54                ADC_GetConversionValue
+                0x0800cb70                ADC_GetDualModeConversionValue
+                0x0800cb88                ADC_AutoInjectedConvCmd
+                0x0800cbc0                ADC_InjectedDiscModeCmd
+                0x0800cbf8                ADC_ExternalTrigInjectedConvConfig
+                0x0800cc30                ADC_ExternalTrigInjectedConvCmd
+                0x0800cc68                ADC_SoftwareStartInjectedConvCmd
+                0x0800cca0                ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x0800ccd8                ADC_InjectedChannelConfig
+                0x0800ce28                ADC_InjectedSequencerLengthConfig
+                0x0800ce74                ADC_SetInjectedOffset
+                0x0800ce9c                ADC_GetInjectedConversionValue
+                0x0800cec8                ADC_AnalogWatchdogCmd
+                0x0800cf04                ADC_AnalogWatchdogThresholdsConfig
+                0x0800cf2c                ADC_AnalogWatchdogSingleChannelConfig
+                0x0800cf68                ADC_TempSensorVrefintCmd
+                0x0800cfb4                ADC_GetFlagStatus
+                0x0800cff0                ADC_ClearFlag
+                0x0800d010                ADC_GetITStatus
+                0x0800d078                ADC_ClearITPendingBit
+ .text          0x0800d0a8      0x38c ./lib/src/stm32f10x_dac.o
+                0x0800d0a8                DAC_DeInit
+                0x0800d0c8                DAC_Init
+                0x0800d144                DAC_StructInit
+                0x0800d178                DAC_Cmd
+                0x0800d1e0                DAC_DMACmd
+                0x0800d248                DAC_SoftwareTriggerCmd
+                0x0800d2b8                DAC_DualSoftwareTriggerCmd
+                0x0800d304                DAC_WaveGenerationCmd
+                0x0800d368                DAC_SetChannel1Data
+                0x0800d390                DAC_SetChannel2Data
+                0x0800d3b8                DAC_SetDualChannelData
+                0x0800d40c                DAC_GetDataOutputValue
+ .text          0x0800d434      0x500 ./lib/src/stm32f10x_dma.o
+                0x0800d434                DMA_DeInit
+                0x0800d674                DMA_Init
+                0x0800d704                DMA_StructInit
+                0x0800d770                DMA_Cmd
+                0x0800d7a8                DMA_ITConfig
+                0x0800d7e8                DMA_GetCurrDataCounter
+                0x0800d804                DMA_GetFlagStatus
+                0x0800d864                DMA_ClearFlag
+                0x0800d89c                DMA_GetITStatus
+                0x0800d8fc                DMA_ClearITPendingBit
+ .text          0x0800d934       0xcc ./lib/src/stm32f10x_flash.o
+                0x0800d934                FLASH_SetLatency
+                0x0800d978                FLASH_HalfCycleAccessCmd
+                0x0800d9bc                FLASH_PrefetchBufferCmd
+ .text          0x0800da00      0x6e8 ./lib/src/stm32f10x_gpio.o
+                0x0800da00                GPIO_DeInit
+                0x0800db30                GPIO_AFIODeInit
+                0x0800db50                GPIO_Init
+                0x0800dd10                GPIO_StructInit
+                0x0800dd3c                GPIO_ReadInputDataBit
+                0x0800dd78                GPIO_ReadInputData
+                0x0800dd94                GPIO_ReadOutputDataBit
+                0x0800ddd0                GPIO_ReadOutputData
+                0x0800ddec                GPIO_SetBits
+                0x0800de08                GPIO_ResetBits
+                0x0800de24                GPIO_WriteBit
+                0x0800de54                GPIO_Write
+                0x0800de70                GPIO_PinLockConfig
+                0x0800deb4                GPIO_EventOutputConfig
+                0x0800df14                GPIO_EventOutputCmd
+                0x0800df34                GPIO_PinRemapConfig
+                0x0800e030                GPIO_EXTILineConfig
+ .text          0x0800e0e8      0x974 ./lib/src/stm32f10x_nvic.o
+                0x0800e0e8                NVIC_DeInit
+                0x0800e16c                NVIC_SCBDeInit
+                0x0800e230                NVIC_PriorityGroupConfig
+                0x0800e258                NVIC_Init
+                0x0800e3bc                NVIC_StructInit
+                0x0800e3f0                NVIC_SETPRIMASK
+                0x0800e3fc                NVIC_RESETPRIMASK
+                0x0800e408                NVIC_SETFAULTMASK
+                0x0800e414                NVIC_RESETFAULTMASK
+                0x0800e420                NVIC_BASEPRICONFIG
+                0x0800e43c                NVIC_GetBASEPRI
+                0x0800e44c                NVIC_GetCurrentPendingIRQChannel
+                0x0800e474                NVIC_GetIRQChannelPendingBitStatus
+                0x0800e4dc                NVIC_SetIRQChannelPendingBit
+                0x0800e4fc                NVIC_ClearIRQChannelPendingBit
+                0x0800e538                NVIC_GetCurrentActiveHandler
+                0x0800e558                NVIC_GetIRQChannelActiveBitStatus
+                0x0800e5c0                NVIC_GetCPUID
+                0x0800e5d8                NVIC_SetVectorTable
+                0x0800e608                NVIC_GenerateSystemReset
+                0x0800e624                NVIC_GenerateCoreReset
+                0x0800e640                NVIC_SystemLPConfig
+                0x0800e698                NVIC_SystemHandlerConfig
+                0x0800e704                NVIC_SystemHandlerPriorityConfig
+                0x0800e814                NVIC_GetSystemHandlerPendingBitStatus
+                0x0800e880                NVIC_SetSystemHandlerPendingBit
+                0x0800e8c4                NVIC_ClearSystemHandlerPendingBit
+                0x0800e90c                NVIC_GetSystemHandlerActiveBitStatus
+                0x0800e974                NVIC_GetFaultHandlerSources
+                0x0800ea0c                NVIC_GetFaultAddress
+ .text          0x0800ea5c      0xa04 ./lib/src/stm32f10x_rcc.o
+                0x0800ea5c                RCC_DeInit
+                0x0800eaf8                RCC_HSEConfig
+                0x0800eb7c                RCC_WaitForHSEStartUp
+                0x0800ebe0                RCC_AdjustHSICalibrationValue
+                0x0800ec28                RCC_HSICmd
+                0x0800ec48                RCC_PLLConfig
+                0x0800ec94                RCC_PLLCmd
+                0x0800ecb4                RCC_SYSCLKConfig
+                0x0800ecf8                RCC_GetSYSCLKSource
+                0x0800ed14                RCC_HCLKConfig
+                0x0800ed58                RCC_PCLK1Config
+                0x0800ed9c                RCC_PCLK2Config
+                0x0800ede4                RCC_ITConfig
+                0x0800ee48                RCC_USBCLKConfig
+                0x0800ee68                RCC_ADCCLKConfig
+                0x0800eeac                RCC_LSEConfig
+                0x0800ef08                RCC_LSICmd
+                0x0800ef28                RCC_RTCCLKConfig
+                0x0800ef54                RCC_RTCCLKCmd
+                0x0800ef74                RCC_GetClocksFreq
+                0x0800f134                RCC_AHBPeriphClockCmd
+                0x0800f18c                RCC_APB2PeriphClockCmd
+                0x0800f1e4                RCC_APB1PeriphClockCmd
+                0x0800f23c                RCC_APB2PeriphResetCmd
+                0x0800f294                RCC_APB1PeriphResetCmd
+                0x0800f2ec                RCC_BackupResetCmd
+                0x0800f30c                RCC_ClockSecuritySystemCmd
+                0x0800f32c                RCC_MCOConfig
+                0x0800f34c                RCC_GetFlagStatus
+                0x0800f3dc                RCC_ClearFlag
+                0x0800f400                RCC_GetITStatus
+                0x0800f440                RCC_ClearITPendingBit
+ .text          0x0800f460      0x614 ./lib/src/stm32f10x_sdio.o
+                0x0800f460                SDIO_DeInit
+                0x0800f4ec                SDIO_Init
+                0x0800f560                SDIO_StructInit
+                0x0800f5a4                SDIO_ClockCmd
+                0x0800f5c4                SDIO_SetPowerState
+                0x0800f608                SDIO_GetPowerState
+                0x0800f624                SDIO_ITConfig
+                0x0800f67c                SDIO_DMACmd
+                0x0800f69c                SDIO_SendCommand
+                0x0800f70c                SDIO_CmdStructInit
+                0x0800f748                SDIO_GetCommandResponse
+                0x0800f760                SDIO_GetResponse
+                0x0800f784                SDIO_DataConfig
+                0x0800f7fc                SDIO_DataStructInit
+                0x0800f840                SDIO_GetDataCounter
+                0x0800f858                SDIO_ReadData
+                0x0800f870                SDIO_WriteData
+                0x0800f890                SDIO_GetFIFOCount
+                0x0800f8a8                SDIO_StartSDIOReadWait
+                0x0800f8c8                SDIO_StopSDIOReadWait
+                0x0800f8e8                SDIO_SetSDIOReadWaitMode
+                0x0800f908                SDIO_SetSDIOOperation
+                0x0800f928                SDIO_SendSDIOSuspendCmd
+                0x0800f948                SDIO_CommandCompletionCmd
+                0x0800f968                SDIO_CEATAITCmd
+                0x0800f994                SDIO_SendCEATACmd
+                0x0800f9b4                SDIO_GetFlagStatus
+                0x0800f9f4                SDIO_ClearFlag
+                0x0800fa14                SDIO_GetITStatus
+                0x0800fa54                SDIO_ClearITPendingBit
+ .text          0x0800fa74      0x1a8 ./lib/src/stm32f10x_systick.o
+                0x0800fa74                SysTick_CLKSourceConfig
+                0x0800fac0                SysTick_SetReload
+                0x0800fae0                SysTick_CounterCmd
+                0x0800fb44                SysTick_ITConfig
+                0x0800fb90                SysTick_GetCounter
+                0x0800fba8                SysTick_GetFlagStatus
+ .text          0x0800fc1c     0x1e6c ./lib/src/stm32f10x_tim.o
+                0x0800fc1c                TIM_DeInit
+                0x0800fd78                TIM_TimeBaseInit
+                0x0800fdfc                TIM_OC1Init
+                0x0800ff24                TIM_OC2Init
+                0x08010074                TIM_OC3Init
+                0x080101c0                TIM_OC4Init
+                0x080102b8                TIM_ICInit
+                0x08010360                TIM_PWMIConfig
+                0x08010424                TIM_BDTRConfig
+                0x08010480                TIM_TimeBaseStructInit
+                0x080104bc                TIM_OCStructInit
+                0x08010510                TIM_ICStructInit
+                0x0801054c                TIM_BDTRStructInit
+                0x08010598                TIM_Cmd
+                0x080105e0                TIM_CtrlPWMOutputs
+                0x0801062c                TIM_ITConfig
+                0x08010678                TIM_GenerateEvent
+                0x08010694                TIM_DMAConfig
+                0x080106c0                TIM_DMACmd
+                0x0801070c                TIM_InternalClockConfig
+                0x08010738                TIM_ITRxExternalClockConfig
+                0x08010768                TIM_TIxExternalClockConfig
+                0x080107c0                TIM_ETRClockMode1Config
+                0x08010814                TIM_ETRClockMode2Config
+                0x08010848                TIM_ETRConfig
+                0x0801089c                TIM_PrescalerConfig
+                0x080108c4                TIM_CounterModeConfig
+                0x08010908                TIM_SelectInputTrigger
+                0x08010944                TIM_EncoderInterfaceConfig
+                0x080109dc                TIM_ForcedOC1Config
+                0x08010a18                TIM_ForcedOC2Config
+                0x08010a58                TIM_ForcedOC3Config
+                0x08010a94                TIM_ForcedOC4Config
+                0x08010ad4                TIM_ARRPreloadConfig
+                0x08010b1c                TIM_SelectCOM
+                0x08010b64                TIM_SelectCCDMA
+                0x08010bac                TIM_CCPreloadControl
+                0x08010bf4                TIM_OC1PreloadConfig
+                0x08010c30                TIM_OC2PreloadConfig
+                0x08010c70                TIM_OC3PreloadConfig
+                0x08010cac                TIM_OC4PreloadConfig
+                0x08010cec                TIM_OC1FastConfig
+                0x08010d28                TIM_OC2FastConfig
+                0x08010d68                TIM_OC3FastConfig
+                0x08010da4                TIM_OC4FastConfig
+                0x08010de4                TIM_ClearOC1Ref
+                0x08010e20                TIM_ClearOC2Ref
+                0x08010e64                TIM_ClearOC3Ref
+                0x08010ea0                TIM_ClearOC4Ref
+                0x08010ee4                TIM_OC1PolarityConfig
+                0x08010f20                TIM_OC1NPolarityConfig
+                0x08010f5c                TIM_OC2PolarityConfig
+                0x08010f9c                TIM_OC2NPolarityConfig
+                0x08010fdc                TIM_OC3PolarityConfig
+                0x0801101c                TIM_OC3NPolarityConfig
+                0x0801105c                TIM_OC4PolarityConfig
+                0x0801109c                TIM_CCxCmd
+                0x080110f4                TIM_CCxNCmd
+                0x0801114c                TIM_SelectOCxM
+                0x0801128c                TIM_UpdateDisableConfig
+                0x080112d4                TIM_UpdateRequestConfig
+                0x0801131c                TIM_SelectHallSensor
+                0x08011364                TIM_SelectOnePulseMode
+                0x080113a8                TIM_SelectOutputTrigger
+                0x080113ec                TIM_SelectSlaveMode
+                0x08011430                TIM_SelectMasterSlaveMode
+                0x08011474                TIM_SetCounter
+                0x08011490                TIM_SetAutoreload
+                0x080114ac                TIM_SetCompare1
+                0x080114c8                TIM_SetCompare2
+                0x080114e4                TIM_SetCompare3
+                0x08011500                TIM_SetCompare4
+                0x08011520                TIM_SetIC1Prescaler
+                0x08011564                TIM_SetIC2Prescaler
+                0x080115ac                TIM_SetIC3Prescaler
+                0x080115f0                TIM_SetIC4Prescaler
+                0x08011638                TIM_SetClockDivision
+                0x08011670                TIM_GetCapture1
+                0x0801168c                TIM_GetCapture2
+                0x080116a8                TIM_GetCapture3
+                0x080116c4                TIM_GetCapture4
+                0x080116e0                TIM_GetCounter
+                0x080116fc                TIM_GetPrescaler
+                0x08011718                TIM_GetFlagStatus
+                0x08011758                TIM_ClearFlag
+                0x0801177c                TIM_GetITStatus
+                0x080117e0                TIM_ClearITPendingBit
+ .text          0x08011a88      0x97c ./lib/src/stm32f10x_usart.o
+                0x08011a88                USART_DeInit
+                0x08011b68                USART_Init
+                0x08011cd4                USART_StructInit
+                0x08011d18                USART_ClockInit
+                0x08011d7c                USART_ClockStructInit
+                0x08011db0                USART_Cmd
+                0x08011df8                USART_ITConfig
+                0x08011ea4                USART_DMACmd
+                0x08011ef0                USART_SetAddress
+                0x08011f34                USART_WakeUpConfig
+                0x08011f78                USART_ReceiverWakeUpCmd
+                0x08011fc0                USART_LINBreakDetectLengthConfig
+                0x08012004                USART_LINCmd
+                0x0801204c                USART_SendData
+                0x08012070                USART_ReceiveData
+                0x08012094                USART_SendBreak
+                0x080120b8                USART_SetGuardTime
+                0x080120f4                USART_SetPrescaler
+                0x0801212c                USART_SmartCardCmd
+                0x08012174                USART_SmartCardNACKCmd
+                0x080121bc                USART_HalfDuplexCmd
+                0x08012204                USART_IrDAConfig
+                0x08012248                USART_IrDACmd
+                0x08012290                USART_GetFlagStatus
+                0x080122d0                USART_ClearFlag
+                0x080122f4                USART_GetITStatus
+                0x080123c0                USART_ClearITPendingBit
+ .text          0x08012404       0x88 ./lib/src/stm32f10x_vector.o
+                0x08012404                Reset_Handler
+ .text          0x0801248c     0x1428 ./lib/src/usb_core.o
+                0x0801248c                Standard_GetConfiguration
+                0x080124d8                Standard_SetConfiguration
+                0x0801254c                Standard_GetInterface
+                0x08012598                Standard_SetInterface
+                0x08012660                Standard_GetStatus
+                0x08012808                Standard_ClearFeature
+                0x08012a30                Standard_SetEndPointFeature
+                0x08012b70                Standard_SetDeviceFeature
+                0x08012bac                Standard_GetDescriptorData
+                0x08013564                Setup0_Process
+                0x08013674                In0_Process
+                0x08013730                Out0_Process
+                0x080137bc                Post0_Process
+                0x0801381c                SetDeviceAddress
+                0x080138a8                NOP_Process
+ .text          0x080138b4       0x5c ./lib/src/usb_endp.o
+                0x080138b4                EP3_OUT_Callback
+                0x080138f8                EP1_IN_Callback
+ .text          0x08013910       0x5c ./lib/src/usb_init.o
+                0x08013910                USB_Init
+ .text          0x0801396c      0x700 ./lib/src/usb_int.o
+                0x0801396c                CTR_LP
+                0x08013f14                CTR_HP
+ .text          0x0801406c      0x170 ./lib/src/usb_istr.o
+                0x0801406c                USB_Istr
+ .text          0x080141dc       0xf8 ./lib/src/usb_mem.o
+                0x080141dc                UserToPMABufferCopy
+                0x08014268                PMAToUserBufferCopy
+ .text          0x080142d4      0x46c ./lib/src/usb_prop.o
+                0x080142d4                Virtual_Com_Port_init
+                0x08014334                Virtual_Com_Port_Reset
+                0x08014484                Virtual_Com_Port_SetConfiguration
+                0x080144b4                Virtual_Com_Port_SetDeviceAddress
+                0x080144cc                Virtual_Com_Port_Status_In
+                0x080144f4                Virtual_Com_Port_Status_Out
+                0x08014500                Virtual_Com_Port_Data_Setup
+                0x080145ac                Virtual_Com_Port_NoData_Setup
+                0x080145f4                Virtual_Com_Port_GetDeviceDescriptor
+                0x0801461c                Virtual_Com_Port_GetConfigDescriptor
+                0x08014644                Virtual_Com_Port_GetStringDescriptor
+                0x08014690                Virtual_Com_Port_Get_Interface_Setting
+                0x080146c8                Virtual_Com_Port_GetLineCoding
+                0x08014704                Virtual_Com_Port_SetLineCoding
+ .text          0x08014740      0x2dc ./lib/src/usb_pwr.o
+                0x08014740                PowerOn
+                0x080147c0                PowerOff
+                0x08014800                Suspend
+                0x08014854                Resume_Init
+                0x08014894                Resume
+ .text          0x08014a1c     0x1228 ./lib/src/usb_regs.o
+                0x08014a1c                SetCNTR
+                0x08014a3c                GetCNTR
+                0x08014a54                SetISTR
+                0x08014a74                GetISTR
+                0x08014a8c                GetFNR
+                0x08014aa4                SetDADDR
+                0x08014ac4                GetDADDR
+                0x08014adc                SetBTABLE
+                0x08014b08                GetBTABLE
+                0x08014b20                SetENDPOINT
+                0x08014b4c                GetENDPOINT
+                0x08014b74                SetEPType
+                0x08014bc8                GetEPType
+                0x08014bf4                SetEPTxStatus
+                0x08014c60                SetEPRxStatus
+                0x08014ccc                SetDouBleBuffEPStall
+                0x08014d28                GetEPTxStatus
+                0x08014d54                GetEPRxStatus
+                0x08014d80                SetEPTxValid
+                0x08014dd4                SetEPRxValid
+                0x08014e28                SetEP_KIND
+                0x08014e74                ClearEP_KIND
+                0x08014eb8                Clear_Status_Out
+                0x08014efc                Set_Status_Out
+                0x08014f48                SetEPDoubleBuff
+                0x08014f94                ClearEPDoubleBuff
+                0x08014fd8                GetTxStallStatus
+                0x0801500c                GetRxStallStatus
+                0x08015044                ClearEP_CTR_RX
+                0x08015088                ClearEP_CTR_TX
+                0x080150cc                ToggleDTOG_RX
+                0x08015110                ToggleDTOG_TX
+                0x08015154                ClearDTOG_RX
+                0x080151b4                ClearDTOG_TX
+                0x08015214                SetEPAddress
+                0x08015264                GetEPAddress
+                0x08015290                SetEPTxAddr
+                0x080152d8                SetEPRxAddr
+                0x08015324                GetEPTxAddr
+                0x08015360                GetEPRxAddr
+                0x080153a0                SetEPTxCount
+                0x080153e0                SetEPCountRxReg
+                0x08015450                SetEPRxCount
+                0x080154e8                GetEPTxCount
+                0x08015530                GetEPRxCount
+                0x08015578                SetEPDblBuffAddr
+                0x080155f8                SetEPDblBuf0Addr
+                0x08015640                SetEPDblBuf1Addr
+                0x0801568c                GetEPDblBuf0Addr
+                0x080156c8                GetEPDblBuf1Addr
+                0x08015708                SetEPDblBuffCount
+                0x08015890                SetEPDblBuf0Count
+                0x08015964                SetEPDblBuf1Count
+                0x08015a38                GetEPDblBuf0Count
+                0x08015a80                GetEPDblBuf1Count
+                0x08015ac8                GetEPDblBufDir
+                0x08015b54                FreeUserBuffer
+                0x08015bdc                ToWord
+                0x08015c0c                ByteSwap
  *(.text.*)
  *(.rodata)
- .rodata        0x08015c3c       0x78 ./src/main.o
- .rodata        0x08015cb4        0x8 ./lib/src/coron_sdfat.o
-                0x08015cb4                s_fat16
- .rodata        0x08015cbc      0x114 ./lib/src/coron_sdtxt.o
- .rodata        0x08015dd0        0xc ./lib/src/coron_sdwav.o
- .rodata        0x08015ddc       0x14 ./lib/src/stm32f10x_rcc.o
- .rodata        0x08015df0       0xb8 ./lib/src/usb_desc.o
-                0x08015df0                Virtual_Com_Port_DeviceDescriptor
-                0x08015e04                Virtual_Com_Port_ConfigDescriptor
-                0x08015e48                Virtual_Com_Port_StringLangID
-                0x08015e4c                Virtual_Com_Port_StringVendor
-                0x08015e74                Virtual_Com_Port_StringProduct
+ .rodata        0x08015c44       0x78 ./src/main.o
+ .rodata        0x08015cbc        0x8 ./lib/src/coron_sdfat.o
+                0x08015cbc                s_fat16
+ .rodata        0x08015cc4      0x114 ./lib/src/coron_sdtxt.o
+ .rodata        0x08015dd8        0xc ./lib/src/coron_sdwav.o
+ .rodata        0x08015de4       0x14 ./lib/src/stm32f10x_rcc.o
+ .rodata        0x08015df8       0xb8 ./lib/src/usb_desc.o
+                0x08015df8                Virtual_Com_Port_DeviceDescriptor
+                0x08015e0c                Virtual_Com_Port_ConfigDescriptor
+                0x08015e50                Virtual_Com_Port_StringLangID
+                0x08015e54                Virtual_Com_Port_StringVendor
+                0x08015e7c                Virtual_Com_Port_StringProduct
  *(.rodata*)
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
-                0x08015ea8                . = ALIGN (0x4)
-                0x08015ea8                _etext = .
-                0x08015ea8                _sidata = _etext
+                0x08015eb0                . = ALIGN (0x4)
+                0x08015eb0                _etext = .
+                0x08015eb0                _sidata = _etext
 
 .vfp11_veneer   0x20000000        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
@@ -941,7 +941,7 @@ LOAD c:/coron/gcc/arm/bin/../lib/gcc/arm-none-eabi/4.4.1/crtbegin.o
 .v4_bx          0x20000000        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.data           0x20000000       0xf4 load address 0x08015ea8
+.data           0x20000000       0xf4 load address 0x08015eb0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -970,7 +970,7 @@ LOAD c:/coron/gcc/arm/bin/../lib/gcc/arm-none-eabi/4.4.1/crtbegin.o
  *fill*         0x200000f1        0x3 00
                 0x200000f4                _edata = .
 
-.bss            0x200000f4     0x2dc0 load address 0x08015f9c
+.bss            0x200000f4     0x2dc0 load address 0x08015fa4
                 0x200000f4                . = ALIGN (0x4)
                 0x200000f4                _sbss = .
  *(.bss)
@@ -1086,7 +1086,7 @@ LOAD c:/coron/gcc/arm/bin/../lib/gcc/arm-none-eabi/4.4.1/crtbegin.o
                 0x20002eb4                PROVIDE (end, _ebss)
                 0x20002eb4                PROVIDE (_end, _ebss)
 
-._usrstack      0x20002eb4      0x400 load address 0x08018d5c
+._usrstack      0x20002eb4      0x400 load address 0x08018d64
                 0x20002eb4                . = ALIGN (0x4)
                 0x20002eb4                _susrstack = .
                 0x200032b4                . = (. + _Minimum_Stack_Size)
@@ -1540,50 +1540,50 @@ LOAD c:/coron/gcc/arm/bin/../lib/gcc/arm-none-eabi/4.4.1/crtbegin.o
  .debug_abbrev  0x00002a59      0x111 ./lib/src/usb_pwr.o
  .debug_abbrev  0x00002b6a      0x147 ./lib/src/usb_regs.o
 
-.debug_line     0x00000000     0x323b
+.debug_line     0x00000000     0x323e
  *(.debug_line)
- .debug_line    0x00000000       0xc0 ./src/main.o
- .debug_line    0x000000c0      0x15f ./src/stm32f10x_it.o
- .debug_line    0x0000021f      0x108 ./lib/src/coron_ad.o
- .debug_line    0x00000327      0x142 ./lib/src/coron_dc.o
- .debug_line    0x00000469       0xcd ./lib/src/coron_init.o
- .debug_line    0x00000536      0x1ad ./lib/src/coron_rc.o
- .debug_line    0x000006e3      0x161 ./lib/src/coron_sdfat.o
- .debug_line    0x00000844      0x110 ./lib/src/coron_sdtxt.o
- .debug_line    0x00000954       0xcc ./lib/src/coron_sdwav.o
- .debug_line    0x00000a20      0x10a ./lib/src/coron_sound.o
- .debug_line    0x00000b2a      0x119 ./lib/src/coron_uart.o
- .debug_line    0x00000c43       0xe7 ./lib/src/coron_usbcdc.o
- .debug_line    0x00000d2a      0x11c ./lib/src/coron_usbprint.o
- .debug_line    0x00000e46       0x99 ./lib/src/coron_wait.o
- .debug_line    0x00000edf      0x6fb ./lib/src/sdcard.o
- .debug_line    0x000015da      0x1eb ./lib/src/stm32f10x_adc.o
- .debug_line    0x000017c5       0xeb ./lib/src/stm32f10x_dac.o
- .debug_line    0x000018b0      0x10e ./lib/src/stm32f10x_dma.o
- .debug_line    0x000019be       0x1d ./lib/src/stm32f10x_exti.o
- .debug_line    0x000019db       0x8e ./lib/src/stm32f10x_flash.o
- .debug_line    0x00001a69      0x152 ./lib/src/stm32f10x_gpio.o
- .debug_line    0x00001bbb       0x1d ./lib/src/stm32f10x_i2c.o
- .debug_line    0x00001bd8       0x1d ./lib/src/stm32f10x_lib.o
- .debug_line    0x00001bf5      0x19d ./lib/src/stm32f10x_nvic.o
- .debug_line    0x00001d92      0x1a5 ./lib/src/stm32f10x_rcc.o
- .debug_line    0x00001f37      0x160 ./lib/src/stm32f10x_sdio.o
- .debug_line    0x00002097       0x1d ./lib/src/stm32f10x_spi.o
- .debug_line    0x000020b4       0xac ./lib/src/stm32f10x_systick.o
- .debug_line    0x00002160      0x3f7 ./lib/src/stm32f10x_tim.o
- .debug_line    0x00002557      0x1a1 ./lib/src/stm32f10x_usart.o
- .debug_line    0x000026f8       0x57 ./lib/src/stm32f10x_vector.o
- .debug_line    0x0000274f      0x126 ./lib/src/syscalls.o
- .debug_line    0x00002875      0x28b ./lib/src/usb_core.o
- .debug_line    0x00002b00       0x55 ./lib/src/usb_desc.o
- .debug_line    0x00002b55       0x6d ./lib/src/usb_endp.o
- .debug_line    0x00002bc2       0x78 ./lib/src/usb_init.o
- .debug_line    0x00002c3a       0xe7 ./lib/src/usb_int.o
- .debug_line    0x00002d21       0xab ./lib/src/usb_istr.o
- .debug_line    0x00002dcc       0x7c ./lib/src/usb_mem.o
- .debug_line    0x00002e48      0x13f ./lib/src/usb_prop.o
- .debug_line    0x00002f87       0xdc ./lib/src/usb_pwr.o
- .debug_line    0x00003063      0x1d8 ./lib/src/usb_regs.o
+ .debug_line    0x00000000       0xc3 ./src/main.o
+ .debug_line    0x000000c3      0x15f ./src/stm32f10x_it.o
+ .debug_line    0x00000222      0x108 ./lib/src/coron_ad.o
+ .debug_line    0x0000032a      0x142 ./lib/src/coron_dc.o
+ .debug_line    0x0000046c       0xcd ./lib/src/coron_init.o
+ .debug_line    0x00000539      0x1ad ./lib/src/coron_rc.o
+ .debug_line    0x000006e6      0x161 ./lib/src/coron_sdfat.o
+ .debug_line    0x00000847      0x110 ./lib/src/coron_sdtxt.o
+ .debug_line    0x00000957       0xcc ./lib/src/coron_sdwav.o
+ .debug_line    0x00000a23      0x10a ./lib/src/coron_sound.o
+ .debug_line    0x00000b2d      0x119 ./lib/src/coron_uart.o
+ .debug_line    0x00000c46       0xe7 ./lib/src/coron_usbcdc.o
+ .debug_line    0x00000d2d      0x11c ./lib/src/coron_usbprint.o
+ .debug_line    0x00000e49       0x99 ./lib/src/coron_wait.o
+ .debug_line    0x00000ee2      0x6fb ./lib/src/sdcard.o
+ .debug_line    0x000015dd      0x1eb ./lib/src/stm32f10x_adc.o
+ .debug_line    0x000017c8       0xeb ./lib/src/stm32f10x_dac.o
+ .debug_line    0x000018b3      0x10e ./lib/src/stm32f10x_dma.o
+ .debug_line    0x000019c1       0x1d ./lib/src/stm32f10x_exti.o
+ .debug_line    0x000019de       0x8e ./lib/src/stm32f10x_flash.o
+ .debug_line    0x00001a6c      0x152 ./lib/src/stm32f10x_gpio.o
+ .debug_line    0x00001bbe       0x1d ./lib/src/stm32f10x_i2c.o
+ .debug_line    0x00001bdb       0x1d ./lib/src/stm32f10x_lib.o
+ .debug_line    0x00001bf8      0x19d ./lib/src/stm32f10x_nvic.o
+ .debug_line    0x00001d95      0x1a5 ./lib/src/stm32f10x_rcc.o
+ .debug_line    0x00001f3a      0x160 ./lib/src/stm32f10x_sdio.o
+ .debug_line    0x0000209a       0x1d ./lib/src/stm32f10x_spi.o
+ .debug_line    0x000020b7       0xac ./lib/src/stm32f10x_systick.o
+ .debug_line    0x00002163      0x3f7 ./lib/src/stm32f10x_tim.o
+ .debug_line    0x0000255a      0x1a1 ./lib/src/stm32f10x_usart.o
+ .debug_line    0x000026fb       0x57 ./lib/src/stm32f10x_vector.o
+ .debug_line    0x00002752      0x126 ./lib/src/syscalls.o
+ .debug_line    0x00002878      0x28b ./lib/src/usb_core.o
+ .debug_line    0x00002b03       0x55 ./lib/src/usb_desc.o
+ .debug_line    0x00002b58       0x6d ./lib/src/usb_endp.o
+ .debug_line    0x00002bc5       0x78 ./lib/src/usb_init.o
+ .debug_line    0x00002c3d       0xe7 ./lib/src/usb_int.o
+ .debug_line    0x00002d24       0xab ./lib/src/usb_istr.o
+ .debug_line    0x00002dcf       0x7c ./lib/src/usb_mem.o
+ .debug_line    0x00002e4b      0x13f ./lib/src/usb_prop.o
+ .debug_line    0x00002f8a       0xdc ./lib/src/usb_pwr.o
+ .debug_line    0x00003066      0x1d8 ./lib/src/usb_regs.o
 
 .debug_frame    0x00000000     0x44ec
  *(.debug_frame)

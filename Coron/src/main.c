@@ -87,7 +87,7 @@ int main(void){
    	
    	// check if AD conversion is working
    	// print AD value at IOA0
-   	for (i=1;i<10000;i++){								// infinite loop
+   	for (i=1;i<1000;i++){								// infinite loop
    		int x,y;
    		LD1_ON;
    		USB_puts("\r\n   IOA0_AD = ");		// send message to ptrint it on PC
@@ -112,9 +112,9 @@ int main(void){
    		
    		
    		LD1_OFF;
+   		*/
    		wait_timer_msec(10);
    		
-   		*/
    		
    	}
    	
