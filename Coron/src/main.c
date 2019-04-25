@@ -37,6 +37,7 @@
 
 int main(void){
 	coron_init();				//Coron初期化(※機能はcoron_conf.hで指定)
+	int i;
 						
 	// LED
 	wait_timer_msec(500);	//500msec待機
@@ -73,8 +74,8 @@ int main(void){
    	
    	// check if AD conversion is working
    	// print AD value at IOA0
-   	while(1){								// infinite loop
-   		int x,y;
+   	for (i=1;i<3001;i++){								// infinite loop
+   		// int x,y;
    		LD1_ON;
    		USB_puts("\r\n   IOA0_AD = ");		// send message to ptrint it on PC
    		USB_putn(coron_IOA_ADValue[0],4);	// print AD value of IOA0 (12bits)
@@ -95,12 +96,15 @@ int main(void){
    			rc_mot_pos[RC1][0] = 1900;		// +45[deg]
    			wait_timer_msec(500);
    		}
-   		*/
+   		
    		
    		LD1_OFF;
    		wait_timer_msec(10);
-   		
+   		*/
    	}
+   	
+   	USB_puts("\r\n\n\n   *** DONE ***");
+   	LD1_OFF;
    	
 	return 0;
 }
