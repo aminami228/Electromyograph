@@ -60,13 +60,26 @@ int main(void){
    	
    	// prints message on PC using USB
    	USB_puts("\r\n\n**** EMG_AD_GET ****\r\n\n");
+   	
+	wait_timer_msec(500);	//500msec‘Ò‹@
+   	LD1_OFF;				//LD1‚ðÁ“”
+   	LD2_OFF;				//LD2‚ðÁ“”
+   	LD3_OFF;				//LD3‚ðÁ“”
+   	wait_timer_msec(1000);
+   	LD1_ON;
+   	LD2_ON;
+   	LD3_ON;
+   	wait_timer_msec(1000);
 
    	// lets AD converter input
    	AD_enable();
    	
-   	// control RC servo at RC1-0
+   	// control RC servo at RC1-0, RC1-1
    	rc_mot_pos[RC1][0] = 1500;				// set central angle to 0[deg] = 1500[us]
    	rc_mot_pos_trim[RC1][0] = 0;			// calibration 0[us]
+   	rc_mot_pos[RC1][1] = 1500;				// set central angle to 0[deg] = 1500[us]
+   	rc_mot_pos_trim[RC1][1] = 0;			// calibration 0[us]
+   	
    	RC_enable();							// approve of PMW signal output (initial output PWM->1500us)
    	wait_timer_msec(500);
    	
@@ -74,7 +87,7 @@ int main(void){
    	
    	// check if AD conversion is working
    	// print AD value at IOA0
-   	for (i=1;i<3001;i++){								// infinite loop
+   	for (i=1;i<10000;i++){								// infinite loop
    		// int x,y;
    		LD1_ON;
    		USB_puts("\r\n   IOA0_AD = ");		// send message to ptrint it on PC
