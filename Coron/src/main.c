@@ -37,8 +37,9 @@
 
 int main(void){
 	coron_init();				//Coron‰Šú‰»(¦‹@”\‚Ícoron_conf.h‚ÅŽw’è)
-	int i,x,y,z;
-	y=0;
+	int i,x,min,max;
+	min = 1000;
+	max = 0;
 						
 	// LED
     LD1_OFF;				
@@ -117,13 +118,21 @@ int main(void){
    		LD1_OFF;
    		*/
    		
-   		y = y + x;	
-   		wait_timer_msec(10);   		
+   		if(x>max){
+   			max = x;
+   		}
+   		if(x<min){
+   			min = x;
+   		}
+   		
+   		wait_timer_msec(10);
+
    	}
    	
-   	z = y/i;
-   	USB_puts("\r\n\n   AVERAGE_VALUE = ");
-   	USB_putn(z,4);
+   	USB_puts("\r\n\n   MAX = ");
+   	USB_putn(max,4);
+   	USB_puts("    MIN = ");
+   	USB_putn(min,4);
    	USB_puts("\r\n\n\n   *** DONE ***");
    	
    	LD1_OFF;
