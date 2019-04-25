@@ -37,7 +37,7 @@
 
 int main(void){
 	coron_init();				//Coron初期化(※機能はcoron_conf.hで指定)
-	int i,x,min,max;
+	int i,x,min,max,ave;
 	min = 1000;
 	max = 0;
 						
@@ -65,16 +65,7 @@ int main(void){
    	
    	// prints message on PC using USB
    	USB_puts("\r\n\n**** EMG_AD_GET ****\r\n\n");
-   	
-	wait_timer_msec(500);	//500msec待機
-   	LD1_OFF;				//LD1を消灯
-   	LD2_OFF;				//LD2を消灯
-   	LD3_OFF;				//LD3を消灯
-   	wait_timer_msec(1000);
-   	LD1_ON;
-   	LD2_ON;
-   	LD3_ON;
-   	wait_timer_msec(1000);
+   	wait_timer_msec(500);
 
    	// lets AD converter input
    	AD_enable();
@@ -87,6 +78,14 @@ int main(void){
    	
    	RC_enable();							// approve of PMW signal output (initial output PWM->1500us)
    	wait_timer_msec(500);
+   	
+   	USB_puts("\r\n\n   3");
+   	wait_timer_msec(1000);
+   	USB_puts("   2");
+   	wait_timer_msec(1000);
+   	USB_puts("   1");
+   	wait_timer_msec(1000);
+   	
    	
    	// NOW LET'S START SERVO WITH MYOELECTRICITY
    	
@@ -107,15 +106,6 @@ int main(void){
    		USB_puts("   RMS = ");
    		USB_putn(y,4);
    		USB_puts("   \r");
-   		
-   		if (x > 500){
-   			rc_mot_pos[RC1][0] = 2300;		// +90[deg]
-   			wait_timer_msec(500);
-   		} else {
-   			rc_mot_pos[RC1][0] = 1900;		// +45[deg]
-   			wait_timer_msec(500);
-   		}
-   		LD1_OFF;
    		*/
    		
    		if(x>max){
@@ -124,18 +114,40 @@ int main(void){
    		if(x<min){
    			min = x;
    		}
-   		
    		wait_timer_msec(10);
-
    	}
    	
    	USB_puts("\r\n\n   MAX = ");
    	USB_putn(max,4);
    	USB_puts("    MIN = ");
    	USB_putn(min,4);
+   	ave = (min + max)/2;
+   	
+   	while(!SW_USER){
+   		x = coron_IOA_ADValue[0];
+   		USB_puts("\r\n   IOA0_AD = ");
+   		USB_putn(x,4);
+   		if(x>ave){
+   			LD1_ON;
+   			rc_mot_pos[RC1][0]=700;	
+   			wait_timer_msec(500);
+   			rc_mot_pos[RC1][0]=2300;
+   			wait_timer_msec(500);	
+   		}else{
+   			LD1_OFF;
+   			rc_mot_pos[RC1][1]=2300;
+   			wait_timer_msec(500);
+   			rc_mot_pos[RC1][1]=1500;
+   			wait_timer_msec(500);			
+   		}
+   	}
+	   		
+   	   		
    	USB_puts("\r\n\n\n   *** DONE ***");
    	
    	LD1_OFF;
+   	
+   	
    	
 	return 0;
 }
