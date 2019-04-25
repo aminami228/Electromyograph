@@ -88,20 +88,20 @@ int main(void){
    	// check if AD conversion is working
    	// print AD value at IOA0
    	for (i=1;i<10000;i++){								// infinite loop
-   		// int x,y;
+   		int x,y;
    		LD1_ON;
    		USB_puts("\r\n   IOA0_AD = ");		// send message to ptrint it on PC
    		USB_putn(coron_IOA_ADValue[0],4);	// print AD value of IOA0 (12bits)
    		
-   		/*
    		y = coron_IOA_ADValue[0];
    		USB_puts("   substitution_OK");
-   		x = abs(x - 2047);
+   		x = abs(y - 2047);
    		USB_puts("   RMS_cal_OK");
    		USB_puts("   RMS = ");
    		USB_putn(x,4);
    		USB_puts("   \r");
    		
+   		/*
    		if (x > 500){
    			rc_mot_pos[RC1][0] = 2300;		// +90[deg]
    			wait_timer_msec(500);
@@ -113,7 +113,9 @@ int main(void){
    		
    		LD1_OFF;
    		wait_timer_msec(10);
+   		
    		*/
+   		
    	}
    	
    	USB_puts("\r\n\n\n   *** DONE ***");
