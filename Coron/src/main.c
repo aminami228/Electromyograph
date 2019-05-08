@@ -71,9 +71,9 @@ int main(void){
    	AD_enable();
    	
    	// control RC servo at RC1-0, RC1-1
-   	rc_mot_pos[RC1][0] = 1500;				// set central angle to 0[deg] = 1500[us]
+   	rc_mot_pos[RC1][0] = 700;				// set central angle to 0[deg] = 1500[us]
    	rc_mot_pos_trim[RC1][0] = 0;			// calibration 0[us]
-   	rc_mot_pos[RC1][1] = 1500;				// set central angle to 0[deg] = 1500[us]
+   	rc_mot_pos[RC1][1] = 700;				// set central angle to 0[deg] = 1500[us]
    	rc_mot_pos_trim[RC1][1] = 0;			// calibration 0[us]
    	
    	RC_enable();							// approve of PMW signal output (initial output PWM->1500us)
@@ -125,25 +125,42 @@ int main(void){
    	USB_puts("    THRESHOLD = ");
    	USB_putn(ave,4);
    	
-   	
    	while(!SW_USER){
    		x = coron_IOA_ADValue[0];
    		USB_puts("\r\n   IOA0_AD = ");
    		USB_putn(x,4);
    		if(x>ave){
    			LD1_ON;
-   			rc_mot_pos[RC1][0]=700;	
-   			wait_timer_msec(500);
+//   			rc_mot_pos[RC1][0]=700;	
+//   			wait_timer_msec(500);
    			rc_mot_pos[RC1][0]=2300;
-   			wait_timer_msec(500);	
-   		}else{
-   			LD1_OFF;
+   			wait_timer_msec(500);
+//   			rc_mot_pos[RC1][1]=700;
+//   			wait_timer_msec(500);
    			rc_mot_pos[RC1][1]=2300;
    			wait_timer_msec(500);
-   			rc_mot_pos[RC1][1]=1500;
-   			wait_timer_msec(500);			
    		}
+   		break;
    	}
+   	
+//   	while(!SW_USER){
+//   		x = coron_IOA_ADValue[0];
+//   		USB_puts("\r\n   IOA0_AD = ");
+//   		USB_putn(x,4);
+//   		if(x>ave){
+//   			LD1_ON;
+//   			rc_mot_pos[RC1][0]=700;	
+//   			wait_timer_msec(500);
+//   			rc_mot_pos[RC1][0]=2300;
+//   			wait_timer_msec(500);	
+//   		}else{
+//   			LD1_OFF;
+//   			rc_mot_pos[RC1][1]=2300;
+//   			wait_timer_msec(500);
+//   			rc_mot_pos[RC1][1]=1500;
+//   			wait_timer_msec(500);			
+//   		}
+//   	}
 	   		
    	   		
    	USB_puts("\r\n\n\n   *** DONE ***");
