@@ -117,11 +117,14 @@ int main(void){
    		wait_timer_msec(10);
    	}
    	
+   	ave = (min + max)/2;
    	USB_puts("\r\n\n   MAX = ");
    	USB_putn(max,4);
    	USB_puts("    MIN = ");
    	USB_putn(min,4);
-   	ave = (min + max)/2;
+   	USB_puts("    THRESHOLD = ");
+   	USB_putn(ave,4);
+   	
    	
    	while(!SW_USER){
    		x = coron_IOA_ADValue[0];
