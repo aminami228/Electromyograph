@@ -124,6 +124,7 @@ int main(void){
    	USB_putn(min,4);
    	USB_puts("    THRESHOLD = ");
    	USB_putn(ave,4);
+   	wait_timer_msec(1000);
    	
    	while(!SW_USER){
    		x = coron_IOA_ADValue[0];
@@ -131,17 +132,19 @@ int main(void){
    		USB_putn(x,4);
    		if(x>ave){
    			LD1_ON;
-//   			rc_mot_pos[RC1][0]=700;	
-//   			wait_timer_msec(500);
-   			rc_mot_pos[RC1][0]=2300;
-   			wait_timer_msec(500);
-//   			rc_mot_pos[RC1][1]=700;
-//   			wait_timer_msec(500);
-   			rc_mot_pos[RC1][1]=2300;
-   			wait_timer_msec(500);
+   			rc_mot_pos[RC1][0]=700;
+   			rc_mot_pos[RC1][1]=700;
+   			rc_mot_ipos[RC1][0]=2300;
+   			RC_move(100);
+   			while(rc_step_flag);
+   			wait_timer_msec(1000);
+   			rc_mot_ipos[RC1][1]=2300;
+   			RC_move(100);
+   			wait_timer_msec(1000);
    		}
-   		break;
+   		wait_timer_msec(100);
    	}
+   	
    	
 //   	while(!SW_USER){
 //   		x = coron_IOA_ADValue[0];
@@ -161,9 +164,12 @@ int main(void){
 //   			wait_timer_msec(500);			
 //   		}
 //   	}
-	   		
+   	
+	rc_mot_pos[RC1][0]=700;
+	rc_mot_pos[RC1][1]=700;
    	   		
    	USB_puts("\r\n\n\n   *** DONE ***");
+
    	
    	LD1_OFF;
    	
