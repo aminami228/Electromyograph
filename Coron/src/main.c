@@ -172,7 +172,7 @@ int main(void){
 //   		}
 //   	}
    	
-//	rc_mot_pos[RC1][0]=700;
+	rc_mot_pos[RC1][0]=700;
 //	rc_mot_pos[RC1][1]=700;
    	   		
    	USB_puts("\r\n\n\n   *** DONE ***");
