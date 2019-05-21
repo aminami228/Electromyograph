@@ -71,9 +71,9 @@ int main(void){
    	AD_enable();
    	
    	// control RC servo at RC1-0, RC1-1
-   	rc_mot_pos[RC1][0] = 2300;				// set central angle to 0[deg] = 1500[us]
+   	rc_mot_pos[RC1][0] = 700;				// set central angle to 0[deg] = 2300[us]
    	rc_mot_pos_trim[RC1][0] = 0;			// calibration 0[us]
-   	rc_mot_pos[RC1][1] = 700;				// set central angle to 0[deg] = 1500[us]
+   	rc_mot_pos[RC1][1] = 2300;				// set central angle to 0[deg] = 700[us]
    	rc_mot_pos_trim[RC1][1] = 0;			// calibration 0[us]
    	
    	RC_enable();							// approve of PMW signal output (initial output PWM->1500us)
@@ -133,17 +133,17 @@ int main(void){
    		if(x>ave){
    			LD1_ON;
    			
-   			rc_mot_ipos[RC1][0]=2300;
-   			RC_move(200);		
-   			rc_mot_ipos[RC1][1]=700;
-   			RC_move(200);
-   			while(rc_step_flag);
-   			
    			rc_mot_ipos[RC1][0]=700;
+   			RC_move(200);		
+   			rc_mot_ipos[RC1][1]=2300;
    			RC_move(200);
    			while(rc_step_flag);
    			
-   			rc_mot_ipos[RC1][1]=1900;
+   			rc_mot_ipos[RC1][0]=2300;
+   			RC_move(200);
+   			while(rc_step_flag);
+   			
+   			rc_mot_ipos[RC1][1]=900;
    			RC_move(200);
    			while(rc_step_flag);
    			
@@ -172,7 +172,7 @@ int main(void){
 //   		}
 //   	}
    	
-	rc_mot_pos[RC1][0]=700;
+	rc_mot_pos[RC1][0]=2300;
 //	rc_mot_pos[RC1][1]=700;
    	   		
    	USB_puts("\r\n\n\n   *** DONE ***");
